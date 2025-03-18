@@ -5,14 +5,7 @@ import logging
 import subprocess
 from datetime import datetime
 
-
-logdir = os.path.dirname(os.path.realpath(__file__))
-logging.basicConfig(
-    filename=os.path.join(logdir, "backup.log"),
-    filemode="a",
-    format="%(asctime)s %(levelname)s %(message)s",
-    level=logging.INFO,
-)
+logging.basicConfig(format="%(asctime)s %(levelname)s %(message)s", level=logging.INFO)
 
 
 def dump_postgres(pg_dump, host, port, db_name, username, filename):
