@@ -58,7 +58,7 @@ if __name__ == "__main__":
     error: %s
     """
     try:
-        if len(sys.argv) != 8:
+        if len(sys.argv) != 9:
             raise Exception("Invalid number of arguments")
         basename = sys.argv[1]
         directory = sys.argv[2]
