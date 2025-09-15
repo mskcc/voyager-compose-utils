@@ -38,7 +38,7 @@ def backup(
         logging.info("Creating backup directory %s" % directory)
         os.mkdir(directory)
     logging.info("Listing backups in %s" % directory)
-    files = list(filter(os.path.isfile, glob.glob(directory + "*")))
+    files = list(filter(os.path.isfile, glob.glob(directory + "/*")))
     files.sort(key=lambda x: os.path.getmtime(x))
     logging.info("Current number of backups %s" % len(files))
     if len(files) == max_backups:
